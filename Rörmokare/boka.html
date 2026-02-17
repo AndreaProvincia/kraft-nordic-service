@@ -18,7 +18,7 @@
     </div>
   </header>
   <main>
-    <section class="booking-section">
+    <section class="booking-section background-boka">
       <div class="booking-card">
         <h1>Boka en tjänst</h1>
         <p class="booking-lead">
@@ -48,15 +48,63 @@
                 <option>Installation av köksblandare</option>
                 <option>Installation av diskmaskin</option>
                 <option>Installation av tvättmaskin</option>
+                <option>Montering badkar</option>
+                <option>Montering WC</option>
+                <option>Montering tvättställ</option>
+                <option>Montering kommodpaket inklusive spegelskåp</option>
+                <option>Byte vattenlås tvättställ / diskho / TM</option>
+                <option>Montering vattenutkastare</option>
+                <option>Montering varmvattenberedare</option>
+                <option>Byte av inkommande vattenmätarkonsoll KV</option>
+                <option>Montering kommod</option>
+                <option>Montering spegelskåp</option>
+                <option>Montering termostatblandare dusch & bad</option>
+                <option>Montering av duschvägg / hörn</option>
+                <option>Montering duschkabin</option>
+                <option>Byte av våtrumsfläkt</option>
+                <option>Montering skåp</option>
+                <option>Byte av innerdörr</option>
+                <option>Montering elektroniskt lås</option>
+                <option>Byte av strömbrytare / dimmer / vägguttag</option>
+                <option>Montering takarmatur</option>
+                <option>Montering köksfläkt</option>
+                <option>Montering av handdukstork</option>
+                <option>Montering av innerdörr inkl. karm</option>
+                <option>Montering lås</option>
+                <option>Montering av ytterdörr inkl. karm</option>
                 <option>Akut VVS</option>
                 <option>Konsultation & rådgivning</option>
+                <option>Hembesök konsultation offert</option>
               </select>
+              <p class="urgent-note" id="urgentNote" hidden>
+                🚨 Vid akuta ärenden – ring oss direkt för snabbast hjälp
+              </p>
             </div>
           </div>
 
           <div class="form-full">
             <label for="message">Meddelande (valfritt)</label>
             <textarea id="message" name="message" placeholder="Beskriv kort vad du behöver hjälp med"></textarea>
+          </div>
+
+          <div class="form-full">
+            <label for="images">Lägg till bilder (valfritt)</label>
+            <input type="file" id="images" name="images" accept="image/*" multiple>
+            <p class="form-meta">Max 5 bilder, t.ex. läckage eller installation.</p>
+          </div>
+
+          <div class="acute-callout" id="acuteCallout">
+            <h3>Akut VVS?</h3>
+            <p>
+              Vid akuta ärenden rekommenderar vi att du ringer oss direkt
+              för snabbast möjliga hjälp.
+            </p>
+            <a href="tel:0701234567" class="btn btn-primary">
+              📞 Ring 070-123 45 67
+            </a>
+            <p class="form-meta">
+              Tillgängliga dygnet runt vid akuta ärenden
+            </p>
           </div>
 
           <button type="submit" class="btn btn-primary">

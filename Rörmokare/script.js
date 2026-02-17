@@ -114,3 +114,22 @@ document.addEventListener('DOMContentLoaded', function() {
         update();
     });
 });
+
+// Show urgent note when Akut VVS is selected
+document.addEventListener('DOMContentLoaded', function() {
+    const serviceSelect = document.querySelector('#service');
+    const urgentNote = document.querySelector('#urgentNote');
+    const messageField = document.querySelector('#message')?.closest('.form-full');
+    const acuteCallout = document.querySelector('#acuteCallout');
+    if (!serviceSelect) return;
+
+    function updateUrgentNote() {
+        const isUrgent = serviceSelect.value === 'Akut VVS';
+        if (urgentNote) urgentNote.hidden = !isUrgent;
+        if (messageField) messageField.style.display = isUrgent ? 'none' : 'block';
+        if (acuteCallout) acuteCallout.style.display = isUrgent ? 'block' : 'none';
+    }
+
+    updateUrgentNote();
+    serviceSelect.addEventListener('change', updateUrgentNote);
+});
