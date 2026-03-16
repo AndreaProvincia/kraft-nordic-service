@@ -133,3 +133,28 @@ document.addEventListener('DOMContentLoaded', function() {
     updateUrgentNote();
     serviceSelect.addEventListener('change', updateUrgentNote);
 });
+
+// Homepage: show first 8 services, reveal the rest on demand
+document.addEventListener('DOMContentLoaded', function() {
+    const grid = document.querySelector('.services-grid');
+    const toggleBtn = document.querySelector('.services-more-btn');
+    if (!grid || !toggleBtn) return;
+
+    const cards = Array.from(grid.querySelectorAll('.service-card'));
+    const visibleCount = 8;
+
+    if (cards.length <= visibleCount) {
+        toggleBtn.style.display = 'none';
+        return;
+    }
+
+    cards.slice(visibleCount).forEach(card => card.classList.add('is-hidden'));
+
+    let expanded = false;
+    toggleBtn.addEventListener('click', function() {
+        expanded = !expanded;
+        cards.slice(visibleCount).forEach(card => card.classList.toggle('is-hidden', !expanded));
+        toggleBtn.textContent = expanded ? 'Visa färre tjänster' : 'Visa fler tjänster';
+        toggleBtn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+    });
+});

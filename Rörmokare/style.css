@@ -313,6 +313,18 @@ body.topbar-fixed-padding {
     background: #0d1b5e;
 }
 
+.topbar-right .urgent-help {
+    background: #e53935;
+    color: #fff;
+    padding: 0.2rem 0.9rem;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.topbar-right .urgent-help:hover {
+    background: #c62828;
+}
+
 .cart-count {
     display: inline-block;
     background: #e53935;
@@ -342,7 +354,7 @@ body.topbar-fixed-padding {
 
 
 .hero-section {
-    min-height: 55vh;
+    min-height: 80vh;
     background: linear-gradient(
         rgb(26 35 126 / 32%),
         rgb(26 35 126 / 28%)
@@ -472,6 +484,32 @@ main {
     gap: 2.2rem;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.service-card.is-hidden {
+    display: none;
+}
+
+.services-more-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.services-more-btn {
+    border: 0;
+    border-radius: 999px;
+    padding: 0.7rem 1.4rem;
+    font-weight: 700;
+    background: #1a237e;
+    color: #fff;
+    cursor: pointer;
+    transition: transform .2s ease, opacity .2s ease;
+}
+
+.services-more-btn:hover {
+    transform: translateY(-1px);
+    opacity: 0.95;
 }
 
 .service-card {
@@ -659,6 +697,10 @@ main {
     gap: 3rem;
     align-items: center;
 }
+.service-header-inner-solo {
+    grid-template-columns: 1fr;
+    max-width: 900px;
+}
 .service-image img { border-radius: 20px; }
 .service-header-card {
     background: #ffffff;
@@ -700,6 +742,44 @@ main {
     background: #eef3fb;
     border-left: 4px solid var(--primary);
     border-radius: 12px;
+}
+
+.service-gallery {
+    padding: 0 2rem 3rem;
+}
+
+.scroll-gallery {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(250px, 380px);
+    gap: 1rem;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 0.5rem;
+}
+
+.scroll-gallery img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 14px;
+    scroll-snap-align: start;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+}
+
+.scroll-gallery::-webkit-scrollbar {
+    height: 8px;
+}
+
+.scroll-gallery::-webkit-scrollbar-thumb {
+    background: #9aa7b8;
+    border-radius: 10px;
+}
+
+.scroll-gallery::-webkit-scrollbar-track {
+    background: #e6ebf2;
+    border-radius: 10px;
 }
 
 .section-subtitle { text-align: center; color: #6b7280; margin-bottom: 2rem; }
