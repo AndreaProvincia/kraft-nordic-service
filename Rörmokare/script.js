@@ -1,17 +1,12 @@
-// Shrink hero on scroll
+// Hide topbar when scrolling down from the top area.
 window.addEventListener('scroll', function() {
-    const hero = document.querySelector('.hero-section');
     const topbar = document.querySelector('.topbar');
-    const body = document.body;
+    if (!topbar) return;
 
     if (window.scrollY > 50) {
-        if (hero) hero.classList.add('shrink');
-        if (topbar) topbar.classList.add('shrink');
-        if (body) body.classList.remove('topbar-fixed-padding');
+        topbar.classList.add('shrink');
     } else {
-        if (hero) hero.classList.remove('shrink');
-        if (topbar) topbar.classList.remove('shrink');
-        if (body) body.classList.add('topbar-fixed-padding');
+        topbar.classList.remove('shrink');
     }
 });
 
