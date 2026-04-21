@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Boka tjänst — Kraft Nordic Service VSS AB</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="topbar">
+      <div class="topbar-left">
+        <a href="index.html" class="topbar-brand" aria-label="Startsida"><img src="img/KNSLoga.png" alt="Logotyp" class="logo">
+        </a>
+      </div>
+      <div class="topbar-center"></div>
+      <div class="topbar-right">
+        <a href="contact.html" class="contact" aria-label="Kontakt">Kontakta oss</a>
+        <a href="akut-vvs.html" class="urgent-help" aria-label="Akut hjälp">Akut hjälp</a>
+      </div>    </div>
+  </header>
+  <main>
+    <section class="booking-section background-boka">
+      <div class="booking-card">
+        <h1>Boka en tjänst</h1>
+        <p class="booking-lead">
+          Fyll i uppgifterna nedan så kontaktar vi dig för att bekräfta tid eller lämna offert.
+        </p>
+
+        <form class="booking-form" action="https://formsubmit.co/kraftnordicservice@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="Ny bokningsförfrågan från webbplatsen">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_autoresponse" value="Tack for din bokningsforfragan till Kraft Nordic Service VVS AB. Vi har tagit emot ditt arende och aterkommer sa snart vi kan, vanligtvis inom 24 timmar.">
+          
+          <!-- Personlig information -->
+          <h3>Personlig information</h3>
+          <div class="form-grid">
+            <div>
+              <label for="firstname">Förnamn *</label>
+              <input type="text" id="firstname" name="firstname" placeholder="Förnamn" required>
+            </div>
+            <div>
+              <label for="lastname">Efternamn *</label>
+              <input type="text" id="lastname" name="lastname" placeholder="Efternamn" required>
+            </div>
+          </div>
+
+          <!-- Kontaktinformation -->
+          <h3>Kontaktinformation</h3>
+          <div class="form-grid">
+            <div>
+              <label for="email">E-post *</label>
+              <input type="email" id="email" name="email" placeholder="din@email.se" required>
+            </div>
+            <div>
+              <label for="phone">Mobiltelefon *</label>
+              <input type="tel" id="phone" name="phone" placeholder="073-914 01 77" required>
+            </div>
+          </div>
+
+          <!-- Fakturaadress -->
+          <h3>Fakturaadress</h3>
+          <div class="form-full">
+            <label for="address">Adress *</label>
+            <input type="text" id="address" name="address" placeholder="Husnummer och gatunamn" required>
+          </div>
+          <div class="form-grid">
+            <div>
+              <label for="postcode">Postnummer *</label>
+              <input type="text" id="postcode" name="postcode" placeholder="123 45" required>
+            </div>
+            <div>
+              <label for="city">Ort *</label>
+              <input type="text" id="city" name="city" placeholder="Stad" required>
+            </div>
+          </div>
+
+          <!-- Tjänst -->
+          <h3>Tjänst</h3>
+          <div class="form-full">
+            <label for="service">Välj tjänst *</label>
+            <select id="service" name="service" required>
+              <option value="">-- Välj en tjänst --</option>
+              <option>Installation av köksblandare</option>
+              <option>Installation av diskmaskin</option>
+              <option>Installation av tvättmaskin</option>
+              <option>Montering badkar</option>
+              <option>Montering WC</option>
+              <option>Montering tvättställ</option>
+              <option>Montering av element</option>
+              <option>Byte vattenlås tvättställ / diskho / TM</option>
+              <option>Montering vattenutkastare</option>
+              <option>Montering varmvattenberedare</option>
+              <option>Byte av inkommande vattenmätarkonsoll KV</option>
+              <option>Montering kommod</option>
+              <option>Montering spegelskåp</option>
+              <option>Montering termostatblandare dusch & bad</option>
+              <option>Montering av duschvägg / hörn</option>
+              <option>Montering duschkabin</option>
+              <option>Montering skåp</option>
+              <option>Byte av innerdörr</option>
+              <option>Montering köksfläkt</option>
+              <option>Montering av innerdörr inkl. karm</option>
+              <option>Montering lås</option>
+              <option>Montering av ytterdörr inkl. karm</option>
+              <option>Hembesök konsultation offert</option>
+            </select>
+          </div>
+
+          <div class="form-full">
+            <label for="message">Meddelande (valfritt)</label>
+            <textarea id="message" name="message" placeholder="Beskriv kort vad du behöver hjälp med"></textarea>
+          </div>
+
+          <!-- Kunduppgifter för ROT -->
+          <h3>Kunduppgifter</h3>
+          <div class="form-full">
+            <label for="personnummer">Personnummer (för ROT-avdrag)</label>
+            <input type="text" id="personnummer" name="personnummer" placeholder="YYYYMMDD-XXXX">
+            <p class="form-meta">Behövs endast om du vill kunna dra av ROT-kostnader</p>
+          </div>
+
+          <div class="form-full">
+            <label for="rot-info">
+              <input type="checkbox" id="rot-checkbox" name="rot-checkbox">
+              Jag önskar att Kraft Nordic Service hanterar ROT-avdraget för mig
+            </label>
+          </div>
+
+          <!-- ROT Information (visas bara om checkbox är markerad) -->
+          <div id="rot-section" style="display:none;">
+            <h3>Uppgifter för ROT</h3>
+            <div class="form-full">
+              <label for="property">Fastighetsbeteckning</label>
+              <input type="text" id="property" name="property" placeholder="T.ex. Stockholms stad 1:23">
+            </div>
+            <div class="form-full">
+              <label for="apartment">Lägenhetsnummer (om lägenhet)</label>
+              <input type="text" id="apartment" name="apartment" placeholder="T.ex. 1401" maxlength="4">
+            </div>
+          </div>
+
+          <div class="acute-callout" id="acuteCallout" style="display:none;">
+            <h3>Akut VVS?</h3>
+            <p>
+              Vid akuta ärenden rekommenderar vi att du ringer oss direkt
+              för snabbast möjliga hjälp.
+            </p>
+            <a href="tel:0739140177" class="btn btn-primary">
+              📞 Ring 073-914 01 77
+            </a>
+            <p class="form-meta">
+              Tillgängliga dygnet runt vid akuta ärenden
+            </p>
+          </div>
+
+          <button type="submit" class="btn btn-primary">
+            Skicka bokningsförfrågan
+          </button>
+
+          <p class="form-meta">
+            Du far ett bekräftelsemejl direkt efter att formuläret har skickats.<br>
+            ⏱ Vi återkommer vanligtvis inom 24 timmar<br>
+            ✔ Inget bindande – du bekräftar alltid först
+          </p>
+        </form>
+
+        <a href="index.html#tjänster" class="back-link">← Tillbaka till tjänster</a>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+    <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col footer-company">
+        <h3>Om företaget</h3>
+        <p>Kraft Nordic Service VVS AB hjälper privatpersoner med trygga VVS-installationer i Stockholm med omnejd.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Kontakt</h3>
+        <p>Telefon: <a href="tel:0739140177">073-914 01 77</a></p>
+        <p>E-post: <a href="mailto:kraftnordicservice@gmail.com">kraftnordicservice@gmail.com</a></p>
+      </div>
+      <div class="footer-col">
+        <h3>Villkor och information</h3>
+        <ul>
+          <li><a href="allmanna-villkor.html">Allmänna villkor</a></li>
+          <li><a href="prisvillkor.html">Prisvillkor</a></li>
+          <li><a href="rot-information.html">ROT-information</a></li>
+          <li><a href="integritetspolicy.html">Integritetspolicy</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+          <li><a href="tjänst-info.html">Om företaget</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+
+
+
+
+
