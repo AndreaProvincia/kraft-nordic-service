@@ -186,9 +186,6 @@ h2 {
 
 .section-title {
     text-align: center;
-:root {
-    --topbar-height: 92px;
-}
     font-size: 2.2rem;
     font-weight: 700;
     color: #1f2933;
@@ -397,6 +394,42 @@ body.topbar-fixed-padding {
     .search-form.open input[type="search"] { width: 140px; }
 }
 
+@media (max-width: 520px) {
+    :root { --topbar-height: 68px; }
+
+    .topbar {
+        padding: 0 0.5rem;
+        gap: 0.45rem;
+    }
+
+    .topbar-left {
+        min-width: 0;
+        flex: 1;
+    }
+
+    .topbar-brand {
+        width: 150px;
+        height: calc(var(--topbar-height) - 14px);
+    }
+
+    .logo {
+        transform: scale(1.08);
+    }
+
+    .topbar-right {
+        gap: 0.35rem;
+        margin-left: 0;
+    }
+
+    .topbar-right .contact,
+    .topbar-right .urgent-help {
+        font-size: 0.78rem;
+        padding: 0.2rem 0.52rem;
+        border-radius: 7px;
+        white-space: nowrap;
+    }
+}
+
 
 .hero-section {
     min-height: 82vh;
@@ -541,6 +574,40 @@ body.topbar-fixed-padding {
     }
     .hero-right {
         display: none;
+    }
+}
+
+@media (max-width: 520px) {
+    .hero-section {
+        min-height: 72vh;
+    }
+
+    .hero-inner {
+        padding: 0.75rem;
+    }
+
+    .overlay-text {
+        padding: 1rem 0.9rem;
+        border-radius: 14px;
+    }
+
+    .overlay-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .overlay-text p,
+    .hero-points {
+        font-size: 0.95rem;
+    }
+
+    .hero-buttons {
+        gap: 0.55rem;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        text-align: center;
+        padding: 0.78rem 1rem;
     }
 }
 
@@ -1542,6 +1609,378 @@ main {
 
     .booking-card {
         padding: 2.2rem 1.6rem;
+    }
+}
+
+@media (max-width: 520px) {
+    .content {
+        padding: 2rem 0.95rem;
+        border-radius: 12px;
+    }
+
+    .section-title {
+        font-size: 1.65rem;
+    }
+
+    .trust {
+        grid-template-columns: 1fr;
+        gap: 0.9rem;
+        padding: 1.2rem 0.75rem;
+        border-radius: 14px;
+    }
+
+    .process-section {
+        margin: 2.4rem auto;
+        padding: 0 0.8rem;
+    }
+
+    .process-section h3 {
+        font-size: 1.4rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .process-card {
+        padding: 1.1rem 0.9rem;
+        border-radius: 12px;
+    }
+
+    .info-section {
+        padding: 2.4rem 0.8rem 2.8rem;
+    }
+
+    .info-card {
+        padding: 1.35rem 1rem;
+        border-radius: 14px;
+    }
+
+    .info-card h3 {
+        font-size: 1.45rem;
+    }
+
+    .info-card p {
+        font-size: 0.98rem;
+        line-height: 1.6;
+    }
+
+    .service-header {
+        padding: 1.2rem 0.75rem;
+    }
+
+    .service-header-card {
+        padding: 1.35rem 1rem;
+        border-radius: 16px;
+    }
+
+    .service-header-card h1 {
+        font-size: 1.6rem;
+        line-height: 1.25;
+    }
+
+    .service-price {
+        font-size: 1.2rem;
+        margin: 0.4rem 0 0.9rem;
+    }
+
+    .service-lead {
+        font-size: 1rem;
+    }
+
+    .service-content {
+        padding: 2rem 0.9rem;
+    }
+
+    .service-gallery {
+        padding: 0 0.9rem 2rem;
+    }
+
+    .scroll-gallery {
+        grid-auto-columns: minmax(78vw, 300px);
+    }
+
+    .scroll-gallery img {
+        height: 200px;
+    }
+
+    .service-cta {
+        flex-direction: column;
+    }
+
+    .service-cta .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .booking-card {
+        padding: 1.3rem 0.95rem;
+        border-radius: 16px;
+    }
+
+    .booking-card h1 {
+        font-size: 1.55rem;
+    }
+
+    .booking-lead {
+        font-size: 0.95rem;
+        margin-bottom: 1.4rem;
+    }
+
+    .form-grid {
+        gap: 0.95rem;
+    }
+
+    .form-full {
+        margin: 1.05rem 0 1.2rem;
+    }
+
+    .acute-callout {
+        padding: 1.2rem 0.9rem;
+        border-radius: 12px;
+    }
+
+    .legal-hero-card h1 {
+        font-size: 1.7rem;
+    }
+
+    .legal-intro-card h2,
+    .legal-section-card h2 {
+        font-size: 1.22rem;
+    }
+}
+
+@media (max-width: 360px) {
+    :root { --topbar-height: 64px; }
+
+    .topbar {
+        padding: 0 0.38rem;
+        gap: 0.3rem;
+    }
+
+    .topbar-brand {
+        width: 128px;
+        height: calc(var(--topbar-height) - 16px);
+    }
+
+    .logo {
+        transform: scale(1.02);
+    }
+
+    .topbar-right {
+        gap: 0.28rem;
+    }
+
+    .topbar-right .contact,
+    .topbar-right .urgent-help {
+        font-size: 0.72rem;
+        padding: 0.18rem 0.42rem;
+        border-radius: 6px;
+    }
+
+    .hero-inner {
+        padding: 0.55rem;
+    }
+
+    .overlay-text {
+        padding: 0.82rem 0.75rem;
+        border-radius: 12px;
+    }
+
+    .overlay-text h1 {
+        font-size: 1.55rem;
+        line-height: 1.2;
+    }
+
+    .overlay-text p,
+    .hero-points {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .hero-buttons .btn {
+        padding: 0.72rem 0.85rem;
+        border-radius: 10px;
+        font-size: 0.9rem;
+    }
+
+    .content {
+        padding: 1.55rem 0.62rem;
+    }
+
+    .section-title {
+        font-size: 1.45rem;
+    }
+
+    .trust {
+        padding: 0.95rem 0.58rem;
+        gap: 0.68rem;
+    }
+
+    .trust-item {
+        padding: 0.9rem 0.72rem;
+    }
+
+    .trust-text {
+        font-size: 0.88rem;
+    }
+
+    .process-section {
+        margin: 2rem auto;
+        padding: 0 0.6rem;
+    }
+
+    .process-card {
+        padding: 0.95rem 0.78rem;
+    }
+
+    .process-step {
+        width: 38px;
+        height: 38px;
+        font-size: 0.95rem;
+        margin-bottom: 0.65rem;
+    }
+
+    .process-card p {
+        font-size: 0.94rem;
+    }
+
+    .process-note {
+        font-size: 0.84rem;
+    }
+
+    .service-header {
+        padding: 0.95rem 0.55rem;
+    }
+
+    .service-header-card {
+        padding: 1.1rem 0.82rem;
+        border-radius: 14px;
+        border-left-width: 4px;
+    }
+
+    .service-header-card h1 {
+        font-size: 1.42rem;
+    }
+
+    .service-price {
+        font-size: 1.08rem;
+    }
+
+    .service-lead {
+        font-size: 0.95rem;
+        line-height: 1.55;
+    }
+
+    .service-content {
+        padding: 1.65rem 0.65rem;
+    }
+
+    .service-gallery {
+        padding: 0 0.65rem 1.6rem;
+    }
+
+    .scroll-gallery {
+        grid-auto-columns: minmax(84vw, 260px);
+    }
+
+    .scroll-gallery img {
+        height: 180px;
+    }
+
+    .services-grid {
+        gap: 1rem;
+    }
+
+    .service-card img {
+        height: 190px;
+    }
+
+    .service-card-body {
+        padding: 0.95rem 0.78rem 0.88rem;
+        gap: 0.85rem;
+    }
+
+    .service-card h3 {
+        font-size: 0.98rem;
+    }
+
+    .service-link,
+    .service-card-price {
+        font-size: 0.84rem;
+    }
+
+    .booking-section {
+        padding: 3rem 0.62rem;
+    }
+
+    .booking-card {
+        padding: 1rem 0.72rem;
+        border-radius: 14px;
+    }
+
+    .booking-card h1 {
+        font-size: 1.4rem;
+    }
+
+    .booking-form input,
+    .booking-form select,
+    .booking-form textarea {
+        padding: 0.65rem;
+        font-size: 0.94rem;
+    }
+
+    .footer-inner {
+        padding: 1.7rem 0.72rem;
+        gap: 1rem;
+    }
+
+    .footer-col h3 {
+        font-size: 1.16rem;
+    }
+
+    .legal-hero {
+        padding: 1.1rem 0.58rem 0.65rem;
+    }
+
+    .legal-hero-card,
+    .legal-intro-card,
+    .legal-section-card {
+        padding: 0.95rem 0.78rem;
+        border-radius: 14px;
+    }
+
+    .legal-hero-card h1 {
+        font-size: 1.45rem;
+    }
+
+    .legal-lead,
+    .legal-section-card p,
+    .legal-intro-card p,
+    .legal-check-list,
+    .legal-meta-list {
+        font-size: 0.93rem;
+        line-height: 1.58;
+    }
+}
+
+/* Touch usability: keep important controls at least 44px high on mobile */
+@media (hover: none) and (pointer: coarse) {
+    .btn,
+    .service-link,
+    .services-more-btn,
+    .filter-btn,
+    .topbar-right a,
+    .search-form .search-toggle,
+    .service-image .slider-btn,
+    .akut-btn,
+    .booking-form button,
+    .booking-form input,
+    .booking-form select,
+    .booking-form textarea {
+        min-height: 44px;
+    }
+
+    .search-form .search-toggle,
+    .service-image .slider-btn {
+        min-width: 44px;
     }
 }
 
